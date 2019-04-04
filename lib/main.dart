@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widgets/pages/tabs.dart';
+import 'package:flutter_widgets/pages/floating_button.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,9 +10,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Widgets',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.red,
       ),
-      home: TabsPage(),
+      home: FloatingPage(),
     );
   }
 }

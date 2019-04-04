@@ -6,6 +6,32 @@ class ButtonPages extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Button Example'),
+        actions: <Widget>[
+          Icon(Icons.new_releases),
+          Container(
+            margin: EdgeInsets.all(12),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              shape: BoxShape.circle
+            ),
+            padding: EdgeInsets.all(4),
+            child: Container(
+              width: 24,
+              height: 24,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                shape: BoxShape.circle,
+                image: DecorationImage(
+                  image: NetworkImage(
+                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI5TDjHkXbNGlduL7AEVMwGn4bc-QosNt7IRcp9fBJ4qN6N0pmHg',
+                      ),
+                  fit: BoxFit.cover,
+                ),
+                // borderRadius: BorderRadius.circular(45)
+              ),
+            ),
+          )
+        ],
       ),
       body: Container(
         width: MediaQuery.of(context).size.width,
@@ -101,7 +127,7 @@ class ButtonPages extends StatelessWidget {
               ),
             ),
             OutlineButton(
-              onPressed: (){},
+              onPressed: () {},
               color: Colors.red,
               child: Text('data'),
             ),
@@ -113,8 +139,8 @@ class ButtonPages extends StatelessWidget {
               onPressed: () {},
               icon: Icon(Icons.new_releases),
             ),
-             IconButton(
-               splashColor: Colors.teal,
+            IconButton(
+              splashColor: Colors.teal,
               color: Colors.black,
               onPressed: () {},
               icon: Icon(Icons.no_encryption),
