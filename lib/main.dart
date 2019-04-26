@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widgets/pages/floating_button.dart';
 import 'grocerry_kit/welcome.dart';
-import 'grocerry_kit/auth.dart';;
+import 'grocerry_kit/auth.dart';
 
 void main() => runApp(MyApp());
 
