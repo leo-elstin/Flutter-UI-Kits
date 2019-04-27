@@ -1,7 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class VerifyPage extends StatelessWidget {
+class VerifyPage extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return _VerifyPageState();
+  }
+}
+
+class _VerifyPageState extends State<VerifyPage> {
+  String string = '';
+  String code1 = '';
+  String code2 = '';
+  String code3 = '';
+  String code4 = '';
+  bool verify = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -73,11 +87,10 @@ class VerifyPage extends StatelessWidget {
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
-                        _inputFields(''),
-                        _inputFields(''),
-                        _inputFields(''),
-                        _inputFields(''),
-
+                        _inputFields(code1),
+                        _inputFields(code2),
+                        _inputFields(code3),
+                        _inputFields(code4),
                       ],
                     ),
                   ),
@@ -105,13 +118,12 @@ class VerifyPage extends StatelessWidget {
                           child: Container(
                             margin: EdgeInsets.all(16),
                             decoration: BoxDecoration(
-                                color: Colors.green, shape: BoxShape.circle),
+                              color: verify ? Colors.green : Colors.grey,
+                              shape: BoxShape.circle,
+                            ),
                             child: IconButton(
                               color: Colors.white,
-                              onPressed: () {
-                                Navigator.pushNamed(
-                                    context, '/grocerry/verify');
-                              },
+                              onPressed: () {},
                               icon: Icon(Icons.check),
                             ),
                           )),
@@ -156,7 +168,9 @@ class VerifyPage extends StatelessWidget {
                       _createCalcButton('0'),
                       InkWell(
                           borderRadius: BorderRadius.circular(45),
-                          onTap: () {},
+                          onTap: () {
+                            deleteCode();
+                          },
                           child: Container(
                               alignment: Alignment.center,
                               // decoration: BoxDecoration(shape: BoxShape.circle),
@@ -177,9 +191,13 @@ class VerifyPage extends StatelessWidget {
 
   Widget _inputFields(String s) {
     return Container(
+      alignment: Alignment.center,
       height: 50,
       width: 85,
-      child: Text(s, style: TextStyle(fontSize: 28),) ,
+      child: Text(
+        s,
+        style: TextStyle(fontSize: 28),
+      ),
       decoration: BoxDecoration(
           shape: BoxShape.rectangle,
           border: Border.all(color: Colors.black26),
@@ -190,7 +208,9 @@ class VerifyPage extends StatelessWidget {
   Widget _createCalcButton(String value) {
     return InkWell(
         borderRadius: BorderRadius.circular(45),
-        onTap: () {},
+        onTap: () {
+          updateCode(value);
+        },
         child: Container(
           alignment: Alignment.center,
           // decoration: BoxDecoration(shape: BoxShape.circle),
@@ -198,8 +218,102 @@ class VerifyPage extends StatelessWidget {
           height: 50,
           child: Text(
             value,
-            style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
+            style: TextStyle(
+              fontSize: 26,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ));
+  }
+
+  void updateCode(String value) {
+    switch (string.length) {
+      case 0:
+        {
+          setState(() {
+            code1 = value;
+          });
+          break;
+        }
+      case 1:
+        {
+          setState(() {
+            code2 = value;
+          });
+          break;
+        }
+      case 2:
+        {
+          setState(() {
+            code3 = value;
+          });
+          break;
+        }
+      case 3:
+        {
+          setState(() {
+            code4 = value;
+          });
+          break;
+        }
+      default:
+        {
+          return;
+        }
+    }
+    string += value;
+     print(string);
+    if (string.length > 3) {
+      setState(() {
+        verify = true;
+      });
+      return;
+    } else {
+      return;
+    }
+  }
+
+  void deleteCode() {
+    switch (string.length) {
+      case 1:
+        {
+          setState(() {
+            code1 = '';
+          });
+          break;
+        }
+      case 2:
+        {
+          setState(() {
+            code2 = '';
+          });
+          break;
+        }
+      case 3:
+        {
+          setState(() {
+            code3 = '';
+          });
+          break;
+        }
+      case 4:
+        {
+          setState(() {
+            code4 = '';
+          });
+          break;
+        }
+      default:
+        {
+          return;
+        }
+    }
+    string = string.substring(0, string.length - 1);
+    if(string.length < 4) {
+      setState(() {
+        verify = false;
+      });
+    }
+    print(string);
   }
 }
