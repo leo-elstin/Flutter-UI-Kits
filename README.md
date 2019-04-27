@@ -3,7 +3,7 @@
 This project contains various inspired UI kits purely coded in Flutter framewrok.
 
 ## Grocery UI Kit
-![alt text](https://assets.materialup.com/uploads/9bd09c6b-95b1-4638-91bc-c5506588f58b/preview.jpg)
+![alt text](https://github.com/leoelstin/flutter_widgets/blob/master/screenshots/preview.jpg?raw=true)
 
 # Feel free to star and fork the project
 
