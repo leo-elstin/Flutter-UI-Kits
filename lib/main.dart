@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widgets/pages/floating_button.dart';
 import 'grocerry_kit/welcome.dart';
 import 'grocerry_kit/auth.dart';
+import 'grocerry_kit/phone_verify.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,11 +11,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Widgets',
+      title: 'UI Kit',
       theme: ThemeData(
-        primarySwatch: Colors.red,
+        brightness: Brightness.light,
+        primarySwatch: Colors.amber,
       ),
-      home: AuthPage(),
+      routes: {
+        '/': (context) => WelcomePage(),
+        '/grocerry/auth': (context) => AuthPage(),
+        '/grocerry/verify': (context) => VerifyPage(),
+      },
     );
   }
 }

@@ -26,7 +26,9 @@ class WelcomePage extends StatelessWidget {
                   child: FlatButton(
                     child: Text('Sign In',
                         style: TextStyle(fontSize: 20, color: Colors.white)),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/grocerry/auth');
+                    },
                   ),
                 ),
                 Container(
@@ -41,7 +43,9 @@ class WelcomePage extends StatelessWidget {
                   child: FlatButton(
                     child: Text('Sign Up',
                         style: TextStyle(fontSize: 20, color: Colors.green)),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/grocerry/auth');
+                    },
                   ),
                 ),
                 Row(
@@ -57,7 +61,9 @@ class WelcomePage extends StatelessWidget {
                       width: 8,
                     ),
                     FlatButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        
+                      },
                       child: Text(
                         'English',
                         style: TextStyle(
