@@ -5,6 +5,8 @@ This project contains various inspired UI kits purely coded in Flutter framewrok
 ## Grocery UI Kit
 ![alt text](https://github.com/leoelstin/flutter_widgets/blob/master/screenshots/preview.jpg?raw=true)
 
+Designed by Ishan **[Ishan Madushka](https://www.uplabs.com/ishan_madushka)**
+
 # Feel free to star and fork the project
 
 I'll continue to work on this project as im learning the flutter framework. 
