@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'grocerry_kit/welcome.dart';
 import 'grocerry_kit/auth.dart';
 import 'grocerry_kit/phone_verify.dart';
+import 'grocerry_kit/home_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => WelcomePage(),
         '/grocerry/auth': (context) => AuthPage(),
         '/grocerry/verify': (context) => VerifyPage(),
+        '/grocerry/home': (context) => HomePage(),
       },
     );
   }

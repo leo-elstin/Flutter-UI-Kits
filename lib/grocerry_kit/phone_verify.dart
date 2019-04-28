@@ -123,7 +123,9 @@ class _VerifyPageState extends State<VerifyPage> {
                             ),
                             child: IconButton(
                               color: Colors.white,
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.pushNamed(context, '/grocerry/home');
+                              },
                               icon: Icon(Icons.check),
                             ),
                           )),
