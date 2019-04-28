@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widgets/utils/cart_icons_icons.dart';
+import 'model/product_model.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -44,6 +45,58 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
             _buildCategoryList(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Padding(
+                  padding: EdgeInsets.only(left: 16, top: 4),
+                  child: Text(
+                    'Prime Member Deals',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(left: 16, top: 4),
+                  child: FlatButton(
+                    onPressed: () {},
+                    child: Text(
+                      'View All',
+                      style: TextStyle(color: Colors.green),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            _buildDealList(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Padding(
+                  padding: EdgeInsets.only(left: 16, top: 4),
+                  child: Text(
+                    'Keells Deals',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(left: 16, top: 4),
+                  child: FlatButton(
+                    onPressed: () {},
+                    child: Text(
+                      'View All',
+                      style: TextStyle(color: Colors.green),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            _buildDealList()
           ],
         ),
       ),
@@ -103,15 +156,17 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget _buildCategoryList() {
+    var items = addItems();
     return Container(
       height: 150,
-      alignment: Alignment.center,
+      alignment: Alignment.centerLeft,
       child: ListView.builder(
         shrinkWrap: true,
         physics: ClampingScrollPhysics(),
         scrollDirection: Axis.horizontal,
-        itemCount: 5,
+        itemCount: items.length,
         itemBuilder: (context, index) {
+          var data = items[index];
           return Column(children: <Widget>[
             Container(
               margin: EdgeInsets.all(10),
@@ -119,7 +174,7 @@ class _HomePageState extends State<HomePage> {
               height: 95,
               alignment: Alignment.center,
               child: Icon(
-                CartIcons.house_hold,
+                data.image,
                 size: 40,
                 color: Colors.black38,
               ),
@@ -137,7 +192,7 @@ class _HomePageState extends State<HomePage> {
             ),
             Row(
               children: <Widget>[
-                Text('House Hold'),
+                Text(data.name),
                 Icon(
                   Icons.keyboard_arrow_right,
                   size: 14,
@@ -148,5 +203,89 @@ class _HomePageState extends State<HomePage> {
         },
       ),
     );
+  }
+
+  Widget _buildDealList() {
+    var items = addItems();
+    return Container(
+      height: 200,
+      alignment: Alignment.centerLeft,
+      child: ListView.builder(
+        shrinkWrap: true,
+        physics: ClampingScrollPhysics(),
+        scrollDirection: Axis.horizontal,
+        itemCount: items.length,
+        itemBuilder: (context, index) {
+          var data = items[index];
+          return Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                Container(
+                  margin: EdgeInsets.all(10),
+                  width: 130,
+                  height: 140,
+                  alignment: Alignment.center,
+                  child: Icon(
+                    data.image,
+                    size: 40,
+                    color: Colors.black38,
+                  ),
+                  decoration: BoxDecoration(
+                    shape: BoxShape.rectangle,
+                    borderRadius: BorderRadius.circular(4),
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black12,
+                        offset: Offset(0, 5),
+                        blurRadius: 15,
+                      )
+                    ],
+                  ),
+                ),
+                Container(
+                  width: 130,
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    data.name,
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(top: 4, left: 4),
+                  width: 130,
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Rs.320',
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                )
+              ]);
+        },
+      ),
+    );
+  }
+
+  List<Product> addItems() {
+    var list = List<Product>();
+
+    var data1 = Product('House Hold', CartIcons.house_hold);
+    list.add(data1);
+    var data2 = Product('Grocery', CartIcons.grocery);
+    list.add(data2);
+    var data3 = Product('Liquor', CartIcons.liquor);
+    list.add(data3);
+    var data4 = Product('Breads', CartIcons.bread);
+    list.add(data4);
+
+    return list;
   }
 }
