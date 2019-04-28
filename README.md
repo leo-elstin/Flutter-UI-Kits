@@ -3,7 +3,9 @@
 This project contains various inspired UI kits purely coded in Flutter framewrok.
 
 ## Grocery UI Kit
-![alt text](https://assets.materialup.com/uploads/9bd09c6b-95b1-4638-91bc-c5506588f58b/preview.jpg)
+![alt text](https://github.com/leoelstin/flutter_widgets/blob/master/screenshots/preview.jpg?raw=true)
+
+Designed by **[Ishan Madushka](https://www.uplabs.com/ishan_madushka)**
 
 # Feel free to star and fork the project
 
@@ -12,6 +14,8 @@ This app is based on a learning course from Udemy with my own customization to m
 
 ## Features
 ### Grocery UI Kit
+
+![alt text](https://github.com/leoelstin/flutter_widgets/blob/master/screenshots/Screenshot%202019-04-28%20at%2012.01.16%20AM.png?raw=true) ![alt text](https://github.com/leoelstin/flutter_widgets/blob/master/screenshots/Screenshot%202019-04-28%20at%2012.01.23%20AM.png?raw=true) ![alt text](https://github.com/leoelstin/flutter_widgets/blob/master/screenshots/Screenshot%202019-04-28%20at%2012.01.36%20AM.png?raw=true)
 
  UI Kit is not completed more # Stars will motivate me work more
 
