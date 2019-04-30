@@ -26,8 +26,8 @@ class _VerifyPageState extends State<VerifyPage> {
           elevation: 0,
           backgroundColor: Colors.white,
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        body: ListView(
+          // mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Container(
               height: 300,
