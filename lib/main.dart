@@ -3,7 +3,7 @@ import 'grocerry_kit/welcome.dart';
 import 'grocerry_kit/auth.dart';
 import 'grocerry_kit/phone_verify.dart';
 import 'grocerry_kit/home_page.dart';
-import 'grocerry_kit/cart.dart';
+import 'grocerry_kit/sub_pages/cart.dart';
 
 void main() => runApp(MyApp());
 
