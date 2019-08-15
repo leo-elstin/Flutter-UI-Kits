@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widgets/form_kit/toast.dart';
 
 class FlutterForm extends StatefulWidget {
   FlutterForm({Key key}) : super(key: key);
@@ -75,6 +76,7 @@ class _FlutterFormState extends State<FlutterForm> {
                     color: Colors.green,
                     child: Text('Validate it Man'),
                     onPressed: () {
+                      Toast.show('helo', context, backgroundColor: Colors.blue, backgroundRadius: 4);
                       _formKey.currentState.save();
                       _formKey.currentState.validate();
                     },
