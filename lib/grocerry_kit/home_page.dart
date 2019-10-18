@@ -91,8 +91,8 @@ Widget _buildAppBar() {
 
 Widget _buildBottomBar(BuildContext con) {
   return BottomNavigationBar(
-    selectedItemColor: Colors.green,
-    unselectedItemColor: Colors.black,
+    // selectedItemColor: Colors.green,
+    // unselectedItemColor: Colors.black,
     type: BottomNavigationBarType.fixed,
     currentIndex: 2,
     onTap: (index) {},
