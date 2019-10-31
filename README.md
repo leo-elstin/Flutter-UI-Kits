@@ -1,6 +1,6 @@
 ### Flutter UI Kits
 
-This project contains various inspired UI kits purely coded in Flutter framewrok.
+This project contains various inspired UI kits purely coded in Flutter framework.
 
 
 ### Wallpaper UI Kit
