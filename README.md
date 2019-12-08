@@ -2,6 +2,39 @@
 
 This project contains various inspired UI kits purely coded in Flutter framewrok.
 
+### Animated BottomBar
+
+![alt text](https://raw.githubusercontent.com/leoelstin/Flutter-UI-Kits/master/images/ezgif.com-crop.gif)
+
+An animated bottom bar with AnimatedSwitcher.
+
+Sample Code :: 
+
+            InkWell(
+              onTap: () => setItem(3),
+              child: Container(
+                  width: 100,
+                  height: 55,
+                  alignment: Alignment.center,
+                  child: AnimatedSwitcher(
+                    transitionBuilder:
+                        (Widget child, Animation<double> animation) {
+                      return ScaleTransition(
+                        scale: animation,
+                        child: child,
+                      );
+                    },
+                    duration: Duration(milliseconds: 250),
+                    child: pos == 3
+                        ? Text('Profile',
+                            style: TextStyle(
+                                color: Colors.blue,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18))
+                        : Icon(Icons.account_circle),
+                  )),
+            ),
+
 
 ### Wallpaper UI Kit
 
