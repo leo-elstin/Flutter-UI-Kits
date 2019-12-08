@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widgets/animation/animated_bottom_bar.dart';
 import 'package:flutter_widgets/form_kit/flutter_form.dart';
 import 'package:flutter_widgets/wallpaper_kit/pages/home_page.dart';
 import 'grocerry_kit/welcome.dart';
@@ -26,8 +27,8 @@ class MyApp extends StatelessWidget {
         '/grocerry/verify': (context) => VerifyPage(),
         '/grocerry/home': (context) => HomePage(),
         '/grocerry/cart': (context) => CartPage(),
+        AnimatedBottomBar.tag: (context) => AnimatedBottomBar(),
       },
     );
   }
 }
-
