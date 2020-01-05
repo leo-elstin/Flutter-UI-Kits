@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:animated_bottombar/animated_bottombar.dart';
 
 class AnimatedBottomBar extends StatefulWidget {
   static String tag = 'animatedBottomBar';
+
   @override
   _AnimatedBottomBarState createState() => _AnimatedBottomBarState();
 }
