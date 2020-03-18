@@ -2,7 +2,10 @@
 
 This project contains various inspired UI kits purely coded in Flutter framework.
 
-### Animated BottomBar
+### Animated BottomBar ([Fancy Bar v1.2.0](https://pub.dev/packages/fancy_bar#-readme-tab- "Fancy Bar v1.2.0"))
+
+Available as a seprate Package @pub
+Clone the project [here.](https://github.com/leoelstin/fancy_bar "here.")
 
 ### V1
 ![alt text](https://raw.githubusercontent.com/leoelstin/Flutter-UI-Kits/master/images/ezgif.com-crop.gif)
