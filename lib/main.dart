@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widgets/animation/animated_bottom_bar.dart';
-import 'package:flutter_widgets/form_kit/flutter_form.dart';
 import 'package:flutter_widgets/note_app/edit_note.dart';
-import 'package:flutter_widgets/note_app/note_home.dart';
-import 'package:flutter_widgets/wallpaper_kit/pages/home_page.dart';
-import 'grocerry_kit/welcome.dart';
+
 import 'grocerry_kit/auth.dart';
-import 'grocerry_kit/phone_verify.dart';
 import 'grocerry_kit/home_page.dart';
+import 'grocerry_kit/phone_verify.dart';
 import 'grocerry_kit/sub_pages/cart.dart';
 
 void main() => runApp(MyApp());
@@ -24,7 +21,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.amber,
       ),
       routes: {
-        '/': (context) => NoteHome(),
+        '/': (context) => AnimatedBottomBar(),
         '/grocerry/auth': (context) => AuthPage(),
         '/grocerry/verify': (context) => VerifyPage(),
         '/grocerry/home': (context) => HomePage(),
