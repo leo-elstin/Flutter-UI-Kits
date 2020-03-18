@@ -4,7 +4,13 @@ This project contains various inspired UI kits purely coded in Flutter framework
 
 ### Animated BottomBar
 
-![alt text](https://raw.githubusercontent.com/leoelstin/Flutter-UI-Kits/master/images/ezgif.com-crop.gif)
+| Preview Version 1 |
+|---------|----------|
+|![FancyBar Gif](https://raw.githubusercontent.com/leoelstin/Flutter-UI-Kits/master/images/ezgif.com-crop.gif) |
+
+| Preview Version 2 |
+|---------|----------|
+|![FancyBar Gif](https://github.com/leoelstin/Flutter-UI-Kits/blob/master/images/fancy_bar_v2.gif?raw=true) |
 
 An animated bottom bar with AnimatedSwitcher.
 
