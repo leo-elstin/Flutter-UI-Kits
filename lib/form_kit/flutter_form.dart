@@ -45,7 +45,6 @@ class _FlutterFormState extends State<FlutterForm> {
                     validator: (value) {
                       return value.isEmpty ? 'Error' : null;
                     },
-                    autovalidate: true,
                     decoration: InputDecoration(
                         // helperText: 'hrlo',
                         // errorText: 'hello',
@@ -60,7 +59,6 @@ class _FlutterFormState extends State<FlutterForm> {
                     validator: (value) {
                       return value.isEmpty ? 'Error' : null;
                     },
-                    autovalidate: true,
                     decoration: InputDecoration(
                         // helperText: 'hrlo',
                         // errorText: 'hello',

@@ -126,9 +126,9 @@ class ButtonPages extends StatelessWidget {
                 ),
               ),
             ),
-            OutlineButton(
+            ElevatedButton(
               onPressed: () {},
-              color: Colors.red,
+              // color: Colors.red,
               child: Text('data'),
             ),
             Text(

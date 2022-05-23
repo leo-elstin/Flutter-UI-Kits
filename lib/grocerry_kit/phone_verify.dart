@@ -100,12 +100,12 @@ class _VerifyPageState extends State<VerifyPage> {
                     children: <Widget>[
                       Padding(
                         padding: EdgeInsets.only(left: 16, right: 16, top: 0),
-                        child: OutlineButton(
-                          padding: EdgeInsets.only(
-                              left: 16, right: 16, top: 8, bottom: 8),
-                          textColor: Colors.red,
-                          color: Colors.red,
-                          borderSide: BorderSide(color: Colors.red),
+                        child: ElevatedButton(
+                          // padding: EdgeInsets.only(
+                          //     left: 16, right: 16, top: 8, bottom: 8),
+                          // textColor: Colors.red,
+                          // color: Colors.red,
+                          // borderSide: BorderSide(color: Colors.red),
                           child: Text(
                             'Resend',
                             style: TextStyle(),

@@ -36,28 +36,29 @@ class _HomePageState extends State<HomePage> {
         },
         items: [
           BottomNavigationBarItem(
-              icon: Icon(
-                CartIcons.home,
-              ),
-              title: Text('   Store  ', style: TextStyle())),
+            icon: Icon(
+              CartIcons.home,
+            ),
+            label: 'Store',
+          ),
           BottomNavigationBarItem(
-              icon: Icon(
-                CartIcons.cart,
-              ),
-              title: Text('My Cart', style: TextStyle())),
+            icon: Icon(
+              CartIcons.cart,
+            ),
+            label: 'My Cart',
+          ),
           BottomNavigationBarItem(
-              icon: Icon(
-                CartIcons.favourites,
-              ),
-              title: Text('Favourites', style: TextStyle())),
+            icon: Icon(
+              CartIcons.favourites,
+            ),
+            label: 'Favourites',
+          ),
           BottomNavigationBarItem(
-              icon: Icon(
-                CartIcons.account,
-              ),
-              title: Text(
-                'My Account',
-                style: TextStyle(),
-              ))
+            icon: Icon(
+              CartIcons.account,
+            ),
+            label: 'My Account',
+          )
         ],
       ),
       body: _widgetList[_index],
@@ -89,38 +90,38 @@ Widget _buildAppBar() {
   );
 }
 
-Widget _buildBottomBar(BuildContext con) {
-  return BottomNavigationBar(
-    // selectedItemColor: Colors.green,
-    // unselectedItemColor: Colors.black,
-    type: BottomNavigationBarType.fixed,
-    currentIndex: 2,
-    onTap: (index) {},
-    items: [
-      BottomNavigationBarItem(
-          icon: Icon(
-            CartIcons.home,
-            color: Colors.black,
-          ),
-          title: Text('   Store  ', style: TextStyle())),
-      BottomNavigationBarItem(
-          icon: Icon(
-            CartIcons.cart,
-          ),
-          title: Text('My Cart', style: TextStyle())),
-      BottomNavigationBarItem(
-          icon: Icon(
-            CartIcons.favourites,
-          ),
-          title: Text('Favourites', style: TextStyle())),
-      BottomNavigationBarItem(
-          icon: Icon(
-            CartIcons.account,
-          ),
-          title: Text(
-            'My Account',
-            style: TextStyle(),
-          ))
-    ],
-  );
-}
+// Widget _buildBottomBar(BuildContext con) {
+//   return BottomNavigationBar(
+//     // selectedItemColor: Colors.green,
+//     // unselectedItemColor: Colors.black,
+//     type: BottomNavigationBarType.fixed,
+//     currentIndex: 2,
+//     onTap: (index) {},
+//     items: [
+//       BottomNavigationBarItem(
+//           icon: Icon(
+//             CartIcons.home,
+//             color: Colors.black,
+//           ),
+//           title: Text('   Store  ', style: TextStyle())),
+//       BottomNavigationBarItem(
+//           icon: Icon(
+//             CartIcons.cart,
+//           ),
+//           title: Text('My Cart', style: TextStyle())),
+//       BottomNavigationBarItem(
+//           icon: Icon(
+//             CartIcons.favourites,
+//           ),
+//           title: Text('Favourites', style: TextStyle())),
+//       BottomNavigationBarItem(
+//           icon: Icon(
+//             CartIcons.account,
+//           ),
+//           title: Text(
+//             'My Account',
+//             style: TextStyle(),
+//           ))
+//     ],
+//   );
+// }
